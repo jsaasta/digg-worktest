@@ -1,7 +1,7 @@
 /**
  * This class is not fully implemented, just a proof of concept.
  */
-package panache;
+package com.jsaasta.panache;
 
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
 import jakarta.ws.rs.core.Response;
