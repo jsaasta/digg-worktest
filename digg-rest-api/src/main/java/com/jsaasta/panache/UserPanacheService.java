@@ -4,6 +4,8 @@
 package com.jsaasta.panache;
 
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.transaction.Transactional;
 import jakarta.ws.rs.core.Response;
 import com.jsaasta.user.User;
 import com.jsaasta.repository.UserRepository;
@@ -17,14 +19,22 @@ import com.jsaasta.repository.UserRepository;
  */
 //@ApplicationScoped
 public class UserPanacheService implements UserRepository, PanacheRepository<Person> {
+
     @Override
     public Response list(int limit, int offset) {
         return Response.ok(listAll()).build();
     }
 
+    @Transactional
     @Override
     public Response add(User user) {
-        return null;
+        Person person = new Person();
+        person.setName(user.getName());
+        person.setAddress(user.getAddress());
+        person.setEmail(user.getEmail());
+        person.setPhoneNumber(user.getPhoneNumber());
+        persist(person);
+        return Response.ok(person).build();
     }
 
 }

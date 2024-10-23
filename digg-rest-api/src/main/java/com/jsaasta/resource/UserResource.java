@@ -41,6 +41,7 @@ public class UserResource {
             return userRepository.add(user);
         } catch (Exception err) {
             LOG.error("Failed to create user.");
+            LOG.error(err);
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity("Could not create user.").build();
         }
     }
