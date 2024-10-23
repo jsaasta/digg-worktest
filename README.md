@@ -36,8 +36,22 @@ Can access swagger-ui at `http://localhost:8080/q/swagger-ui/`
 
 Can access healthcheck at `http://localhost:8080/q/health`
 
-### Get users:
+### Get Users:
 `GET http://localhost:8080/digg/user` returns all users
 
 `GET http://localhost:8080/digg/user?limit={int}&offset={int}` returns {limit} amount of users, starting at {offset}, used for pagination.
-### 
+### Post User
+
+`POST http://localhost:8080/digg/user`
+
+`Content-Type: application/json`
+
+Body:
+```
+{
+  "name": "Uncle Donald",
+  "address": "The väg 123",
+  "email": "donald@acme.com",
+  "phoneNumber": "070-1231234"
+}
+```
