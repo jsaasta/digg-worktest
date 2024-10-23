@@ -18,6 +18,26 @@ To run both backend and frontend:
 1. `cd ./digg-codetest`
 2. `docker compose up --build`
 
-Backend is accessible through `localhost:8080`
+Backend is accessible through `http://localhost:8080`
 
-Frontend is accessible through `localhost:5173`
+Frontend is accessible through `http://localhost:5173`
+
+
+### Run as dev
+1. `cd ./digg-rest-api`
+2. `./mvnw compile quarkus:dev`
+
+## Endpoints
+
+### Swagger UI
+Can access swagger-ui at `http://localhost:8080/q/swagger-ui/`
+
+### Health check
+
+Can access healthcheck at `http://localhost:8080/q/health`
+
+### Get users:
+`GET http://localhost:8080/digg/user` returns all users
+
+`GET http://localhost:8080/digg/user?limit={int}&offset={int}` returns {limit} amount of users, starting at {offset}, used for pagination.
+### 
