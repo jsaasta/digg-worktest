@@ -66,9 +66,9 @@ class UserServiceTest {
         userService = new UserService(users);
 
         PaginatedUserResult actualResult = (PaginatedUserResult) userService.list(1, 0).getEntity();
-        assertEquals(expectedUserResultSet, actualResult.users);
-        assertEquals(1, actualResult.currentPage);
-        assertEquals(5, actualResult.pages);
+        assertEquals(expectedUserResultSet, actualResult.getUsers());
+        assertEquals(1, actualResult.getCurrentPage());
+        assertEquals(5, actualResult.getPages());
     }
 
 

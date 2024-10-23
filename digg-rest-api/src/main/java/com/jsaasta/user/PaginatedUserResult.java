@@ -4,9 +4,9 @@ import java.util.Set;
 
 public class PaginatedUserResult {
 
-    public Set<User> users;
-    public int pages;
-    public int currentPage;
+    private Set<User> users;
+    private int pages;
+    private int currentPage;
 
     public PaginatedUserResult() {
     }
@@ -24,5 +24,29 @@ public class PaginatedUserResult {
                 ", pages=" + pages +
                 ", currentPage=" + currentPage +
                 '}';
+    }
+
+    public Set<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Set<User> users) {
+        this.users = users;
+    }
+
+    public int getPages() {
+        return pages;
+    }
+
+    public void setPages(int pages) {
+        this.pages = pages;
+    }
+
+    public int getCurrentPage() {
+        return currentPage;
+    }
+
+    public void setCurrentPage(int currentPage) {
+        this.currentPage = currentPage;
     }
 }
