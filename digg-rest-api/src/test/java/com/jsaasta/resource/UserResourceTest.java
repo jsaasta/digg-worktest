@@ -1,11 +1,13 @@
-package com.jsaasta.user;
+package com.jsaasta.resource;
 
 import com.google.gson.Gson;
+import com.jsaasta.user.User;
 import io.quarkus.test.common.http.TestHTTPEndpoint;
 import io.quarkus.test.junit.QuarkusTest;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
+import com.jsaasta.resource.UserResource;
 
 import java.util.Set;
 

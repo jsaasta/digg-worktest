@@ -1,5 +1,6 @@
-package com.jsaasta.user;
+package com.jsaasta.repository;
 
+import com.jsaasta.user.User;
 import jakarta.ws.rs.core.Response;
 
 public interface UserRepository {

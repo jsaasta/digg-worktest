@@ -1,10 +1,10 @@
-package com.jsaasta.user;
+package com.jsaasta.service;
 
-import io.quarkus.test.junit.QuarkusTest;
-import jakarta.inject.Inject;
 import com.jsaasta.user.PaginatedUserResult;
 import com.jsaasta.user.User;
-import com.jsaasta.user.UserService;
+import io.quarkus.test.junit.QuarkusTest;
+import jakarta.inject.Inject;
+import com.jsaasta.service.UserService;
 import org.junit.jupiter.api.Test;
 
 

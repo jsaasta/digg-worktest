@@ -1,8 +1,11 @@
-package com.jsaasta.user;
+package com.jsaasta.service;
 
+import com.jsaasta.user.PaginatedUserResult;
+import com.jsaasta.user.User;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.ws.rs.core.Response;
 import org.jboss.logging.Logger;
+import com.jsaasta.repository.UserRepository;
 
 import java.util.*;
 

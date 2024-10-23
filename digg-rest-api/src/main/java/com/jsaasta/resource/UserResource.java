@@ -1,9 +1,11 @@
-package com.jsaasta.user;
+package com.jsaasta.resource;
 
+import com.jsaasta.user.User;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import org.jboss.logging.Logger;
+import com.jsaasta.repository.UserRepository;
 
 import java.util.*;
 

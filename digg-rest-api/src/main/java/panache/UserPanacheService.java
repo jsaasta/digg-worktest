@@ -1,12 +1,12 @@
 /**
  * This class is not fully implemented, just a proof of concept.
  */
-package com.jsaasta.user.panache;
+package panache;
 
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
 import jakarta.ws.rs.core.Response;
 import com.jsaasta.user.User;
-import com.jsaasta.user.UserRepository;
+import com.jsaasta.repository.UserRepository;
 
 /**
  * This is commented out because DI-handling is not configured to be property-based.
