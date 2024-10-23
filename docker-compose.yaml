@@ -1,0 +1,24 @@
+services:
+  backend:
+    build:
+      context: ./digg-rest-api
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - digg
+    #command: ["./application", "-Dquarkus.http.host=0.0.0.0"]
+
+  frontend:
+    build:
+      context: ./digg-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:80"
+    networks:
+      - digg
+
+networks:
+  digg:
+    name: digg-network
+    driver: bridge
