@@ -1,9 +1,9 @@
 <script setup>
-import DataTable from '@/components/users/UserTable.vue'
+import UserTable from '@/components/users/UserTable.vue'
 </script>
 
 <template>
-  <DataTable></DataTable>
+  <UserTable></UserTable>
 </template>
 
 <style scoped>
